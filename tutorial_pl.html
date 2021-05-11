@@ -1,0 +1,491 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0088)http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/29-pingwinaria/155-rtl-sdr01?showall=1 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl-pl" lang="pl-pl" slick-uniqueid="3"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <!--<base href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/29-pingwinaria/155-rtl-sdr01">--><base href=".">
+	
+	<meta name="keywords" content="RTL-SDR, rtl-sdr, SDR, sdr, software defined radio">
+	<meta name="generator" content="Joomla! - Open Source Content Management">
+	<title>SDR, RTL-SDR - jak zacząć?</title>
+	<link href="http://www.tatek.pl/templates/tatek/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+	<link href="./tutorial_pl_files/shadowbox.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="./tutorial_pl_files/jcemediabox.css" rel="stylesheet" type="text/css">
+	<link href="./tutorial_pl_files/style.css" rel="stylesheet" type="text/css">
+	<link href="./tutorial_pl_files/definitions.min.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+/* Multithumb 3.6.0 */
+ .multithumb {     margin: 5px;     float: left;  }
+.multithumb_blog {    margin: 5px;    float: left; }
+ .mtGallery {     margin: 5px;     align: center;     float: none;  }
+ .mtCapStyle {     font-weight: bold;    color: black;    background-color: #ddd;    margin: 0px 4px;    text-align:center;    white-space: pre-wrap; }
+.plg_system_eprivacy_module .plg_system_eprivacy_message,
+.plg_system_eprivacy_module div.plg_system_eprivacy_accepted,
+.plg_system_eprivacy_module div.plg_system_eprivacy_declined {
+border: none;
+color: #000;
+vertical-align:middle;
+background-color: rgba(224,224,224,0.1);
+text-shadow: 1px 1px 2px rgba(255,255,255,0.9);
+padding: 1px 5px;
+ -webkit-border-radius: 6px;
+ -moz-border-radius: 6px;
+ -o-border-radius: 6px;
+ -ms-border-radius: 6px;
+ border-radius: 6px;
+}
+
+.plg_system_eprivacy_module .plg_system_eprivacy_message button.plg_system_eprivacy_agreed,
+.plg_system_eprivacy_module .plg_system_eprivacy_message button.plg_system_eprivacy_declined {
+font-size: 0.8em;
+text-shadow: 1px 1px 2px rgba(235,235,235,1);
+padding: 1px 5px;
+ -webkit-border-radius: 6px;
+ -moz-border-radius: 6px;
+ -o-border-radius: 6px;
+ -ms-border-radius: 6px;
+ border-radius: 6px;
+border: 1px solid #888;
+color: #444;
+vertical-align:middle;
+}
+
+.plg_system_eprivacy_module .plg_system_eprivacy_message button.plg_system_eprivacy_agreed {
+color:#000;
+background-color:#0a0;
+}
+.plg_system_eprivacy_module .plg_system_eprivacy_message button.plg_system_eprivacy_declined {
+color:#fff;
+background-color:#a00;
+}
+.plg_system_eprivacy_module div.plg_system_eprivacy_accepted button,
+.plg_system_eprivacy_module div.plg_system_eprivacy_declined button {
+font-size: 0.8em;
+font-weight: bold;
+text-shadow: 1px 1px 2px rgba(235,235,235,1);
+margin: 0px 5px 5px 10px;
+padding: 2px 10px;
+ -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+ -o-border-radius: 4px;
+ -ms-border-radius: 4px;
+ border-radius: 4px;
+border: 1px solid #888;
+color: #444;
+vertical-align: top;
+float:right;
+}
+	</style>
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"499a83a89e707d105d1ed1dd27686251","system.paths":{"root":"","base":""},"joomla.jtext":{"PLG_SYS_EPRIVACY_JSMESSAGE":"By clicking OK, you are accepting cookies.","PLG_SYS_EPRIVACY_MESSAGE":"This website uses cookies to manage authentication, navigation, and other functions.  By using our website, you agree that we can place these types of cookies on your device.","PLG_SYS_EPRIVACY_TH_COOKIENAME":"Cookie Name","PLG_SYS_EPRIVACY_TH_COOKIEDOMAIN":"Domain","PLG_SYS_EPRIVACY_TH_COOKIEDESCRIPTION":"Description","PLG_SYS_EPRIVACY_TD_SESSIONCOOKIE":"Session Cookie","PLG_SYS_EPRIVACY_TD_SESSIONCOOKIE_DESC":"The session cookie is required for authentication, preference tracking, and other necessary functions to fully engage with this website.  The name of the session cookie is randomly generated.","PLG_SYS_EPRIVACY_CONFIRMUNACCEPT":"Performing this action will remove all cookies set by this website.  Third party cookies will no longer communicate to their parent sites, but cannot be removed by this website and must be removed by other means.\n\nAre you sure you want to disable and remove cookies?"},"plg_system_eprivacy":{"displaytype":"module","autoopen":true,"accepted":false,"root":"\/index.php","cookies":{"sessioncookie":false,"accepted":[]},"cookie":{"domain":".","path":null},"loginlinks":[],"country":"not detected","cookieregex":[]}}</script>
+	<script src="./tutorial_pl_files/shadowbox.js" type="text/javascript"></script>
+	<script src="./tutorial_pl_files/jcemediabox.js" type="text/javascript"></script>
+	<script src="./tutorial_pl_files/mootools-core.js" type="text/javascript"></script>
+	<script src="./tutorial_pl_files/core.js" type="text/javascript"></script>
+	<script src="./tutorial_pl_files/mootools-more.js" type="text/javascript"></script>
+	<script src="./tutorial_pl_files/jquery.min.js" type="text/javascript"></script>
+	<script src="./tutorial_pl_files/jquery-noconflict.js" type="text/javascript"></script>
+	<script src="./tutorial_pl_files/jquery-migrate.min.js" type="text/javascript"></script>
+	<script src="./tutorial_pl_files/base64.min.js" type="text/javascript"></script>
+	<script src="./tutorial_pl_files/eprivacy.class.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+window.onload=function(){
+var b = document.getElementsByTagName("head"); 				
+var body = b[b.length-1] ;  
+script2 = document.createElement("script");   
+script2.type = "text/javascript";
+script2.charset="utf-8";
+var tt = "Shadowbox.init( {  animate:	           1 ,animateFade:           1 ,animSequence:        \"sync\"  ,autoplayMovies:	       1  ,continuous:	           0  ,counterLimit:	      10 ,counterType:	      \"default\"    ,displayCounter:	       1  ,displayNav:	          1 ,enableKeys:	           1  ,fadeDuration:          0.35 ,flashVersion:	      \"9.0.0\"  ,handleOversize:	      \"resize\"  ,handleUnsupported:	 \"link\"  ,initialHeight:	       160 ,initialWidth:	       320 ,modal:	               0  ,overlayColor:	      \"#000\"  ,overlayOpacity:	       0.5  ,resizeDuration:	       0.35  ,showOverlay:	      1 ,showMovieControls:	   1 ,slideshowDelay:	      0 ,viewportPadding:	   20 ,flashVars: {}    } );"
+if (navigator.appName == "Microsoft Internet Explorer") {
+	script2.text = tt;
+} else {
+	script2.appendChild( document.createTextNode(tt) );
+}
+body.appendChild(script2);  
+}
+JCEMediaBox.init({popup:{width:"",height:"",legacy:0,lightbox:0,shadowbox:0,resize:1,icons:1,overlay:1,overlayopacity:0.8,overlaycolor:"#000000",fadespeed:500,scalespeed:500,hideobjects:0,scrolling:"fixed",close:2,labels:{'close':'Close','next':'Next','previous':'Previous','cancel':'Cancel','numbers':'{$current} of {$total}'},cookie_expiry:"",google_viewer:0},tooltip:{className:"tooltip",opacity:0.8,speed:150,position:"br",offsets:{x: 16, y: 16}},base:"/",imgpath:"plugins/system/jcemediabox/img",theme:"standard",themecustom:"",themepath:"plugins/system/jcemediabox/themes",mediafallback:0,mediaselector:"audio,video"});
+	</script>
+
+ 
+ <link rel="stylesheet" href="./tutorial_pl_files/tatek.css" type="text/css" media="all">
+ <script type="text/javascript" src="./tutorial_pl_files/jquery.js"></script>
+ <script type="text/javascript" src="./tutorial_pl_files/hoverIntent.js"></script>
+ <script type="text/javascript" src="./tutorial_pl_files/hide.js"></script>
+ <link rel="icon" type="image/gif" href="http://www.tatek.pl/templates/tatek/favicon.ico">
+
+<script type="text/javascript" charset="utf-8">Shadowbox.init( {  animate:	           1 ,animateFade:           1 ,animSequence:        "sync"  ,autoplayMovies:	       1  ,continuous:	           0  ,counterLimit:	      10 ,counterType:	      "default"    ,displayCounter:	       1  ,displayNav:	          1 ,enableKeys:	           1  ,fadeDuration:          0.35 ,flashVersion:	      "9.0.0"  ,handleOversize:	      "resize"  ,handleUnsupported:	 "link"  ,initialHeight:	       160 ,initialWidth:	       320 ,modal:	               0  ,overlayColor:	      "#000"  ,overlayOpacity:	       0.5  ,resizeDuration:	       0.35  ,showOverlay:	      1 ,showMovieControls:	   1 ,slideshowDelay:	      0 ,viewportPadding:	   20 ,flashVars: {}    } );</script></head>
+<body data-new-gr-c-s-check-loaded="14.1010.0" data-gr-ext-installed="">
+<div style="position: absolute; z-index: 2; width: 100%; height: 100%; overflow: auto">
+  <div class="strona">
+    		<div class="moduletable">
+						<div class="plg_system_eprivacy_module">
+        <div class="plg_system_eprivacy_message" style="">
+                <p>This website uses cookies to manage authentication, navigation, and other functions.  By using our website, you agree that we can place these types of cookies on your device.</p>
+                    <p><a href="http://www.tatek.pl/o-mnie/prywatnosc" target="_blank">View Privacy Policy</a></p>
+                            <p><a href="https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32002L0058:PL:NOT" onclick="window.open(this.href);return false;" target="_blank">View e-Privacy Directive Documents</a></p>
+            <p><a href="https://eur-lex.europa.eu/legal-content/PL/TXT/HTML/?uri=CELEX:32016R0679" onclick="window.open(this.href);return false;" target="_blank">View GDPR Documents</a></p>
+                        <button class="plg_system_eprivacy_agreed">I agree</button>
+        <button class="plg_system_eprivacy_declined">I decline</button>
+    </div>
+    <div class="plg_system_eprivacy_declined" style="display:none">
+        <p>
+            <button class="plg_system_eprivacy_reconsider">Reconsider Cookies</button> 
+            You have declined cookies.  This decision can be reversed.        </p>
+    </div>
+        <div class="plg_system_eprivacy_accepted" style="display:none">
+        <p>
+            <button class="plg_system_eprivacy_reconsider">Change Cookie Consent</button> 
+            <button class="plg_system_eprivacy_accepted">Remove Cookies</button> 
+            You have allowed cookies to be placed on your computer.  This decision can be reversed.        </p>
+    </div>
+</div>
+<div id="plg_system_eprivacy" style="display:none"></div>		</div>
+	
+    <div id="skok">
+      
+
+<div class="custom">
+	<div style="text-align: left; font-family: tahoma; text-decoration: none;">&nbsp;<br><a href="http://www.tatek.pl/index.php"><img src="./tutorial_pl_files/ltatek3_01.png" alt="mt_ignore: Tatek.pl"></a><br>&nbsp;</div>
+<div><a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat" class="page">Elektronika</a><a href="http://www.tatek.pl/bakcyl/kr-radiowy" class="page">Radiowo</a><a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/44-xgo90/180-xg90" class="page">Xiegu G-90</a><a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/43-nanovna/166-nanovna01" class="page">NanoVNA</a><a href="http://www.tatek.pl/31-katsl60/106-sl60articles" class="page">Edytor SL6</a></div></div>
+
+    </div>
+                <div id="wrapper">
+      <div id="colonne">
+        		<div class="moduletable_menu">
+						<ul class="nav menu mod-list">
+<li class="item-101 default"><a href="http://www.tatek.pl/">Home</a></li><li class="item-123 active deeper parent"><a href="http://www.tatek.pl/bakcyl">Hobby</a><ul class="nav-child unstyled small"><li class="item-124"><a href="http://www.tatek.pl/bakcyl/ch-warsztat">(al)Chemiczne</a></li><li class="item-125 parent"><a href="http://www.tatek.pl/bakcyl/foto-graficznie">(foto)Graficzne</a></li><li class="item-144 active deeper parent"><a href="http://www.tatek.pl/bakcyl/kr-radiowy">Radiowe</a><ul class="nav-child unstyled small"><li class="item-145"><a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-geneza">Słowo o...</a></li><li class="item-146"><a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-start">Na starcie</a></li><li class="item-147"><a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-trylogia">Trylogia</a></li><li class="item-148"><a href="http://www.tatek.pl/bakcyl/kr-radiowy/karta-qsl">Karta QSL</a></li><li class="item-150"><a href="http://www.tatek.pl/bakcyl/kr-radiowy/hamspirit">Ham Spirit</a></li><li class="item-149"><a href="http://www.tatek.pl/bakcyl/kr-radiowy/sp-emcomm">SP EmComm</a></li><li class="item-151"><a href="http://www.tatek.pl/bakcyl/kr-radiowy/kody-q">Kody Q</a></li><li class="item-152"><a href="http://www.tatek.pl/bakcyl/kr-radiowy/literowanie">Literowanie</a></li><li class="item-153"><a href="http://www.tatek.pl/bakcyl/kr-radiowy/slang">Slang</a></li><li class="item-154 current active"><a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat">Kuźnia</a></li></ul></li><li class="item-155 parent"><a href="http://www.tatek.pl/bakcyl/linuksowo">Informatyczne</a></li></ul></li><li class="item-166 parent"><a href="http://www.tatek.pl/warsztat">Kuźnia</a></li><li class="item-170 parent"><a href="http://www.tatek.pl/o-mnie">O mnie</a></li><li class="item-157 parent"><a href="http://www.tatek.pl/m-fotogaleria">Fotogaleria</a></li></ul>
+		</div>
+			<div class="moduletable">
+							<h3>Najnowsze...</h3>
+						<ul class="latestnews mod-list">
+	<li itemscope="" itemtype="https://schema.org/Article">
+		<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/45-warsztat/w-krotkofalowca/wk-projekty/k-rspi/190-rpios-alias" itemprop="url">
+			<span itemprop="name">
+				Raspberry PI OS - aliasy			</span>
+		</a>
+	</li>
+	<li itemscope="" itemtype="https://schema.org/Article">
+		<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/45-warsztat/w-krotkofalowca/wk-projekty/k-rspi/189-imager01" itemprop="url">
+			<span itemprop="name">
+				Raspberry Pi Imager - rekonfiguracja bootloadera RPi			</span>
+		</a>
+	</li>
+	<li itemscope="" itemtype="https://schema.org/Article">
+		<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/45-warsztat/w-krotkofalowca/wk-projekty/k-rspi/188-micros01" itemprop="url">
+			<span itemprop="name">
+				Mikroskop do lutowania (RPi 4B+HQC+M42)			</span>
+		</a>
+	</li>
+	<li itemscope="" itemtype="https://schema.org/Article">
+		<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/43-nanovna/187-nanovna01-wup" itemprop="url">
+			<span itemprop="name">
+				NanoVNA - wgranie nowego firmware'u (pod Windą)			</span>
+		</a>
+	</li>
+	<li itemscope="" itemtype="https://schema.org/Article">
+		<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/44-xgo90/186-xg90-cat" itemprop="url">
+			<span itemprop="name">
+				Xiegu G-90 - alternatywny kabel CAT			</span>
+		</a>
+	</li>
+</ul>
+		</div>
+			<div class="moduletable">
+							<h3>W temacie...</h3>
+						<div class="tagssimilar">
+	<ul>
+			<li>
+							<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/42-pingwinaria/make01/158-build01">
+											automake, build-essential, Cmake... na dobry start									</a>
+					</li>
+			<li>
+							<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/33-warsztat/w-krotkofalowca/wk-opinie/131-nwt7b-usb">
+											Gdy port LinNWT na ttyUSB0 milczy...									</a>
+					</li>
+			<li>
+							<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/29-pingwinaria/114-usberr01">
+											Kłopot z USB pod Linuksem									</a>
+					</li>
+			<li>
+							<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/42-pingwinaria/make01/138-linnwt01">
+											Samodzielna kompilacja LinNWT									</a>
+					</li>
+			<li>
+							<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/42-pingwinaria/make01/157-wxwidgets01">
+											wxWidgets (biblioteka) - instalacja ze źródeł									</a>
+					</li>
+			<li>
+							<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/42-pingwinaria/make01/160-liquide-dsp01">
+											Biblioteka liquid-dsp - kompilacja ze źródeł									</a>
+					</li>
+			<li>
+							<a href="http://www.tatek.pl/bakcyl/linuksowo/mn-dash00">
+											Ikony na pasku dash									</a>
+					</li>
+			<li>
+							<a href="http://www.tatek.pl/bakcyl/linuksowo/aliasy">
+											Alias, czyli pójście "na skróty"...									</a>
+					</li>
+			<li>
+							<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/42-pingwinaria/make01/161-cubicsdr01">
+											CubicSDR - kompilacja ze źródeł									</a>
+					</li>
+			<li>
+							<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/29-pingwinaria/163-mysql01">
+											MySQL - zagubione ;) hasło root'a									</a>
+					</li>
+		</ul>
+</div>
+		</div>
+			<div class="moduletable">
+							<h3>Popularne...</h3>
+						<ul class="mostread mod-list">
+	<li itemscope="" itemtype="https://schema.org/Article">
+		<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/31-katsl60/83-sl60-okno" itemprop="url">
+			<span itemprop="name">
+				Okno programu			</span>
+		</a>
+	</li>
+	<li itemscope="" itemtype="https://schema.org/Article">
+		<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/33-warsztat/w-krotkofalowca/wk-opinie/48-utd2052cex" itemprop="url">
+			<span itemprop="name">
+				Oscyloskop UTD2052CEX			</span>
+		</a>
+	</li>
+	<li itemscope="" itemtype="https://schema.org/Article">
+		<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/10-warsztat/w-fotografa/10-czyszczenie-matrycy" itemprop="url">
+			<span itemprop="name">
+				Czyszczenie matrycy			</span>
+		</a>
+	</li>
+	<li itemscope="" itemtype="https://schema.org/Article">
+		<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/32-warsztat/w-krotkofalowca/wk-projekty/17-gemcz-lift" itemprop="url">
+			<span itemprop="name">
+				Generator m.cz. - po liftingu			</span>
+		</a>
+	</li>
+	<li itemscope="" itemtype="https://schema.org/Article">
+		<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/31-katsl60/105-sl60makro01" itemprop="url">
+			<span itemprop="name">
+				Od bitmapy do makra...			</span>
+		</a>
+	</li>
+</ul>
+		</div>
+			<div class="moduletable">
+						<dl class="stats-module">
+	<dt>Odsłon artykułów:</dt>
+	<dd>11447386</dd>
+</dl>
+		</div>
+			<div class="moduletable">
+						
+
+<div class="custom">
+	<div style="margin: 20px 0 5px 10px;"><a href="http://info.flagcounter.com/pB6h"><img src="./tutorial_pl_files/saved_resource" alt="mt_ignore:Odwiedziny:"></a></div></div>
+		</div>
+			<div class="moduletable">
+						
+			<p>Odwiedza nas 219&nbsp;gości oraz&nbsp;0 użytkowników.</p>
+
+		</div>
+			<div class="moduletable">
+						
+
+<div class="custom">
+	<p style="text-align: center;"><a href="http://www.fsfe.org/freesoftware/freesoftware.html" target="_blank">Created with free software</a><br>Tatek.pl - 2021</p>
+<p></p>
+<p style="font-weight: bold; text-shadow: -1px -1px 2px #444, 1px 1px 1px #000; color: #fff; text-align: center;">IP: 89.64.61.22 
+
+</p></div>
+		</div>
+	
+      </div>
+      <div id="main" role="main">
+        <div class="item-page">
+
+
+
+	<h2>
+
+	
+		<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/29-pingwinaria/155-rtl-sdr01">
+
+		SDR, RTL-SDR - jak zacząć?</a>
+
+	
+	</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<dl class="article-info">
+
+	<dt class="article-info-term">Szczegóły</dt>
+
+
+
+
+
+
+
+
+
+	<dd class="hits">
+
+	Odsłony: 124806
+	</dd>
+
+
+
+	</dl>
+
+
+
+
+
+	<div class="pull-right article-index">
+
+		<h3>Spis treści</h3>
+	
+	<ul class="nav nav-tabs nav-stacked">
+					<li class="toclink">
+			<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/29-pingwinaria/155-rtl-sdr01" class="toclink">
+				SDR, RTL-SDR - jak zacząć?			</a>
+		</li>
+					<li>
+			<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/29-pingwinaria/155-rtl-sdr01?start=1" class="toclink">
+				Podłączamy tuner i...			</a>
+		</li>
+					<li>
+			<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/29-pingwinaria/155-rtl-sdr01?start=2" class="toclink">
+				Instalowanie sterowników			</a>
+		</li>
+					<li class="active">
+			<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/29-pingwinaria/155-rtl-sdr01?showall=1" class="toclink active">
+				Wszystkie strony			</a>
+		</li>
+		</ul>
+</div>
+
+
+
+
+
+
+<div class="content-links">
+
+	<ul>
+
+		
+	</ul>
+
+	
+</div>
+
+
+
+
+
+
+
+
+<p class="par00"><a target="_blank" href="http://www.tatek.pl/images/warsztat/tux/sdr01/sdr00.jpg" rel="shadowbox[page]" title="Software Defined Radio" style="cursor: url(&#39;/plugins/content/multithumb/magnify.cur&#39;), auto;"><img src="./tutorial_pl_files/b_150_0_16777215_00_images_warsztat_tux_sdr01_sdr00.jpg" width="150" height="112" class="limg multithumb" alt="Software Defined Radio"></a><span style="font-weight: bold;">Radio programowalne (Software Defined Radio, SDR)</span> to system radiokomunikacji, w którym <span style="font-weight: bold;">elementy tradycyjnie implementowane sprzętowo</span> (np. mieszacze, filtry, wzmacniacze, modulatory/demodulatory, detektory itp.) <span style="font-weight: bold;">realizowane są w oparciu o oprogramowanie</span> zainstalowanym na PC (lub innych urządzeniach o podobnych funkcjach).</p>
+<p class="par00"><a target="_blank" href="http://www.tatek.pl/images/warsztat/tux/sdr01/sdr02.jpg" rel="shadowbox[page]" title="Warto odwiedzić GnuRadio.org" style="cursor: url(&#39;/plugins/content/multithumb/magnify.cur&#39;), auto;"><img src="./tutorial_pl_files/b_150_0_16777215_00_images_warsztat_tux_sdr01_sdr02.jpg" width="150" height="106" class="rimg multithumb" alt="Warto odwiedzić GnuRadio.org"></a>Sama koncepcja SDR nie jest nowa. Wiele informacji na jej temat znajdziesz na stronach <a href="https://www.gnuradio.org/" target="_blank" rel="noopener noreferrer">GnuRadio.org</a> czy też stronach <a href="https://en.wikipedia.org/wiki/Software-defined_radio" target="_blank" rel="noopener noreferrer">Wikipedii poświęconych technice SDR</a>.</p>
+<p class="par00">Większość procesów przetwarzania sygnałów (radiowych, akustycznych, itd.) przez wiele lat było jedynie przedmiotem analiz teoretycznych. Obecny, szybki rozwój możliwości cyfrowych układów elektronicznych sprawił, że&nbsp; zostały one praktycznie zrealizowane. A możliwości współczesnych komputerów pozwalają skorzystać z tych projektów. Niemal każdemu.</p>
+<p class="par00">Niniejszy opis dotyczy instalacji prostego tunera DVB-T (nazywanego dalej tunerem) pod systemem Linux (Debian, Ubuntu, Mint, itp.) i takim skonfigurowaniu OS'a, by móc bezproblemowo wykorzystać go jako urządzenie SDR.</p>
+ 
+<p><span style="font-weight: bold;">Od czego zacząć?</span></p>
+<p class="par00"><a target="_blank" href="http://www.tatek.pl/images/warsztat/tux/sdr01/sdr01.jpg" rel="shadowbox[page]" title="Dongle, stick DVB-T czyli tuner DVB-t na USB" style="cursor: url(&#39;/plugins/content/multithumb/magnify.cur&#39;), auto;"><img src="./tutorial_pl_files/b_150_0_16777215_00_images_warsztat_tux_sdr01_sdr01.jpg" width="150" height="119" class="limg multithumb" alt="Dongle, stick DVB-T czyli tuner DVB-t na USB"></a>Zakup prostych (i atrakcyjnych cenowo?) tunerów dedykowanych dla komputerów PC jest chyba najprostszą drogą do poznania technik odbioru sygnałów radiowych przy pomocy urządzeń SDR.</p>
+<p class="par00">Warte zapamiętania jest jednak to, że często (choć nie zawsze!) cena bywa wykładnikiem możliwości urządzenia.</p>
+<p class="par00">Te za &lt;50zł wielkich nie mają. Ale (niektóre z tych za) &gt;300zł też nie zachwycają. Warto więc poczytać. Zwłaszcza artykuły niesponsorowane.<a target="_blank" href="http://www.tatek.pl/images/warsztat/tux/sdr01/sdr01a.jpg" rel="shadowbox[page]" title="Nowsza wersja" style="cursor: url(&#39;/plugins/content/multithumb/magnify.cur&#39;), auto;"><img src="./tutorial_pl_files/b_150_0_16777215_00_images_warsztat_tux_sdr01_sdr01a.jpg" width="150" height="144" class="rimg multithumb" alt="Nowsza wersja"></a></p>
+<p class="par00">System odbiorczy to: dobra antena (co krótkofalowców nie dziwi), adekwatny do potrzeb sprzęt czyli tuner oraz komputer PC (u mnie: z systemem operacyjnym Linux).</p>
+<p class="par00"><a target="_blank" href="http://www.tatek.pl/images/warsztat/tux/sdr01/sdr03.jpg" rel="shadowbox[page]" title="LinRad" style="cursor: url(&#39;/plugins/content/multithumb/magnify.cur&#39;), auto;"><img src="./tutorial_pl_files/b_150_0_16777215_00_images_warsztat_tux_sdr01_sdr03.jpg" width="150" height="109" class="limg multithumb" alt="LinRad"></a>Oczywiście na komputerze muszą zostać zainstalowane odpowiednie sterowniki oraz oprogramowanie (Linrad, Gqrx, <a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/29-pingwinaria/161-cubicsdr01" target="_blank" rel="noopener noreferrer">CubicSDR,</a> itd., ale to temat na odrębny artykuł).</p>
+<p class="par00">Testy przeprowadzone dla komercyjnych stacji UKF-FM pozwoliły poznać funkcjonalność poszczególnych programów.</p>
+<p class="par00"><a target="_blank" href="http://www.tatek.pl/images/warsztat/tux/sdr01/sdr04.jpg" rel="shadowbox[page]" title="Gqrx" style="cursor: url(&#39;/plugins/content/multithumb/magnify.cur&#39;), auto;"><img src="./tutorial_pl_files/b_150_0_16777215_00_images_warsztat_tux_sdr01_sdr04.jpg" width="150" height="114" class="rimg multithumb" alt="Gqrx"></a>Istotna jest świadomość, że (funkcjonalnie) czym innym jest tuner DVB-T (i przypisane do niego sterowniki oraz oprogramowanie), a czym innym tuner RTL-SDR, które wymaga własnych, zupełnie innych sterowników oraz odmiennej ich konfiguracji. Są to rozwiązania alternatywne. Albo jedno, albo drugie.</p>
+<p class="par00">W dalszej części opisu używam określenia "tuner", które odnosi się do fizycznego urządzenia (dongle, stick) podłączonego do gniazda USB komputera. Natomiast jego funkcje zostaną określone przez odpowiednio dobrane sterowniki i oprogramowanie aplikacyjne.</p>
+<p class="par00">Dalsza część artykułu będzie poświęcona bardziej zagadnieniom programowym (sterowniki, oprogramowanie) niż sprzętowym, gdyż to oprogramowanie&nbsp; pozwoli wykorzystać możliwości tunera. I komputera. Ale tuner (dongle) miej cały czas "pod ręką".<a target="_blank" href="http://www.tatek.pl/images/warsztat/tux/sdr01/sdr05.jpg" rel="shadowbox[page]" title="CubicSDR" style="cursor: url(&#39;/plugins/content/multithumb/magnify.cur&#39;), auto;"><img src="./tutorial_pl_files/b_150_0_16777215_00_images_warsztat_tux_sdr01_sdr05.jpg" width="150" height="96" class="limg multithumb" style="margin-left: 10px;" alt="CubicSDR"></a></p>
+<p class="par00">Instalacja i uruchomienie tunera RTL-SDR na komputerze (z Linuksem) nie jest skomplikowane. Wymaga jednak realizacji odpowiedniego scenariusza (chronologii) wykonywanych procedur. Zanim przystąpisz do dalszych działań (o ile nie zrobiłeś tego wcześniej) warto zapoznać się z artykułem: <a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/29-pingwinaria/158-build01" target="_blank" rel="noopener noreferrer">Automake, build-essential, cmake... na dobry start</a>, gdzie opisałem czynności związane z przygotowaniem systemu Linux do samodzielnej kompilacji kodów źródłowych.</p>
+<p class="par00">Wskazane <span style="font-weight: bold;">procedury winny zostać wykonane w trybie znakowym lub w oknie terminala uruchomionego w trybie graficznym</span>. Jeśli nie zostało zaznaczone inaczej ich wykonywane nie wymaga uprawnień superusera - root'a. Często jednak będziemy korzystali z "sudo"!</p>
+<p class="par00">Podłączenie tunera do komputera (wbrew oczekiwaniom) nie daje od razu możliwości odbioru sygnałów przy pomocy aplikacji dedykowanych dla urządzeń SDR. A dokładniej RTL-SDR.</p>
+<br>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Podłączamy tuner i...</span></p>
+<p class="par00">Zacznijmy od komendy (to pogrubiony tekst w listingu), która oprócz innych urządzeń wyświetli informację o tunerze:</p>
+<blockquote class="kontener">~ $ <span style="font-weight: bold;">lsusb</span><br>...<br>Bus 003 Device 004: ID 0bda:2838 Realtek Semiconductor Corp. RTL2838 DVB-T<br>...<br>~ $</blockquote>
+<p class="par00">Jeśli po podłączeniu tunera do PC zajrzymy do katalogu /dev znajdziemy tam informację o aktywnych urządzeniach dvb:</p>
+<blockquote class="kontener">~$ <span style="font-weight: bold;">ll -R /dev/dvb</span><br>dvb:<br>razem 0<br>drwxr-xr-x 3 root root 60 sty 27 14:31 ./ <br>drwxr-xr-x 22 root root 4700 sty 27 14:31 ../<br>drwxr-xr-x 2 root root 120 sty 27 14:31 adapter0/<br>dvb/adapter0:<br>razem 0<br>drwxr-xr-x 2 root root 120 sty 27 14:31 ./<br>drwxr-xr-x 3 root root 60 sty 27 14:31 ../<br>crw-rw-rw-+ 1 root video 212, 0 sty 27 14:31 demux0<br>crw-rw-rw-+ 1 root video 212, 1 sty 27 14:31 dvr0<br>crw-rw-rw-+ 1 root video 212, 3 sty 27 14:31 frontend0<br>crw-rw-rw-+ 1 root video 212, 2 sty 27 14:31 net0<br>/dev $</blockquote>
+<p>Warto też sprawdzić katalog /etc/modprobe.d:</p>
+<blockquote class="kontener">~ $ <span style="font-weight: bold;">ls /etc/modprobe.d | grep rtl</span><br>blacklist-rtl.conf<br>~ $</blockquote>
+<p class="par00">Widać, że znajduje się tam (ale bywa, że tam go nie ma - to nie problem, ale uprzedzam) plik <span style="font-weight: bold;">blacklist-rtl.conf</span> (teoretycznie!) wyłączający ładowanie w momencie inicjacji modułów obsługujących tuner DVB-T. Warto zajrzeć co on zawiera:</p>
+<blockquote class="kontener">~ $ <span style="font-weight: bold;">cat /etc/modprobe.d/blacklist-rtl.conf</span><br># This system has librtlsdr0 installed in order to<br># use digital video broadcast receivers as generic<br># software defined radios.<br># blacklist dvb_usb_rtl28xxu<br># blacklist e4000<br># blacklist rtl2832<br># blacklist fc0013<br>~ $</blockquote>
+<p class="par00">Zawartość pliku może być różna. Powyższy listing prezentuje zawartość rzeczywistego pliku. Zwróć uwagę, że (tu) wszystkie linie (zawierające frazę: blacklist) zaczynają się od znaku # (hash). Powoduje to, że nie wyłączają one niczego, gdyż (zaczynając się od #) są jedynie komentarzem! Potwierdza to również efekt komendy (wydanej przy podłączonym do PC tunerze DVB-T):</p>
+<blockquote class="kontener">~ $ <span style="font-weight: bold;">lsmod | grep dvb</span><br>dvb_usb_rtl28xxu 40960 1<br>dvb_usb_v2 40960 1 dvb_usb_rtl28xxu<br>dvb_core 126976 2 dvb_usb_v2,rtl2832<br>rc_core 36864 5 ir_lirc_codec,lirc_dev,dvb_usb_v2,dvb_usb_rtl28xxu<br>~ $</blockquote>
+<p class="par00">Jak widać moduły związane z obsługą tunera DVB-T (ale nie RTL-SDR) są aktywne. Ich obecność nie pozwoli na zainstalowanie sterowników dla SDR'a. Oczywiście możemy spróbować usunąć z systemu (aktywne) moduły związane z obsługą tunera DVB-T:</p>
+<blockquote class="kontener">~ $ <span style="font-weight: bold;">sudo rmmod dvb_usb_rtl28xxu rtl2832</span><br>rmmod: ERROR: Module dvb_usb_rtl28xxu is in use<br>rmmod: ERROR: Module rtl2832 is in use<br>~ $</blockquote>
+<p class="par00">ale <span style="font-weight: bold;">czeka nas przykra niepodzianka.</span></p>
+<p class="par00">Jeśli tuner jest włożony do gniazda USB ta prosta komenda skończy się błędem, gdyż moduły wykrywają aktywność urządzenia. Możemy je odłączyć. Ale włożenie tunera do gniazda spowoduje ponowne załadowanie modułów. Gdy podłączymy tuner DVB-T wyposażony w dobrą antenę po wydaniu komendy:</p>
+<blockquote class="kontener">~ $ <span style="font-weight: bold;">w_scan</span><br>w_scan w_scan version 20170107 (compiled for DVB API 5.10)<br>guessing country 'PL', use -c to override<br>using settings for POLAND<br>DVB aerial<br>DVB-T Europe<br>scan type TERRESTRIAL, channellist 4<br>output format vdr-2.0<br>output charset 'UTF-8', use -C to override<br>Info: using DVB adapter auto detection.<br>/dev/dvb/adapter0/frontend0 -&gt; TERRESTRIAL "Realtek RTL2832 (DVB-T)": good :-)<br>Using TERRESTRIAL frontend (adapter /dev/dvb/adapter0/frontend0)<br>-_-_-_-_ Getting frontend capabilities-_-_-_-_<br>Using DVB API 5.10<br>frontend 'Realtek RTL2832 (DVB-T)' supports<br>INVERSION_AUTO<br>QAM_AUTO<br>TRANSMISSION_MODE_AUTO<br>GUARD_INTERVAL_AUTO<br>HIERARCHY_AUTO<br>FEC_AUTO<br>FREQ (174.00MHz ... 862.00MHz)<br>-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_<br>Scanning DVB-T...<br>Scanning...&lt;tu pojawi się lista dostępnych stacji TV&gt;<br><br>--- lub gdy antena kiepska i/lub brak dostępnych stacji:<br>ERROR: Sorry - i couldn't get any working frequency/transponder<br>Nothing to scan!! ---<br>~ $</blockquote>
+<p class="par00">Jeśli coś wykrył to tuner umożliwia oglądanie wybranych kanałów TV. A przecież nie o to nam chodziło. Musimy zrealizować wspomniany na wstępie scenariusz. Zacznijmy więc od...</p>
+<p><span style="font-weight: bold;">Przygotowanie środowiska</span></p>
+<p>a.) zaktualizuj system (posiadaną dystrybucję Linux'a):</p>
+<blockquote class="kontener">~$ <span style="font-weight: bold;">sudo apt-get update</span></blockquote>
+<p>b.) zanim przystąpisz do dalszych działań (o ile nie zrobiłeś tego wcześniej) zapoznaj się z artykułem: <a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/29-pingwinaria/158-build01" target="_blank" rel="noopener noreferrer">Automake, build-essential, cmake... na dobry start</a>, gdzie opisałem czynności związane z przygotowaniem samodzielnej kompilacji kodów źródłowych. Należy w oknie terminala wydać polecenie (<a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/29-pingwinaria/158-build01" target="_blank" rel="noopener noreferrer">w artykule</a> opisałem to znacznie szerzej).:</p>
+<blockquote class="kontener">~$ <span style="font-weight: bold;">sudo apt-get install git automake cmake build-essential libusb-1.0-0-dev</span></blockquote>
+<p class="par00">Jeśli któryś z programów został już wcześniej zainstalowany to pojawi się komunikat wskazujący, że jest on już w najnowszej wersji. Może wydawać się, że nie wszystkie instalowane pakiety są potrzebne.</p>
+<p class="par00">Tu powiem tylko tyle: potem doinstalujemy ich jeszcze więcej, gdyż <span style="font-weight: bold;">kolejnym celem będzie samodzielna kompilacja (budowa ze źródeł) programów: Gqrx oraz CubicSDR.</span> Ale to już materiał na odrębny artykuł.</p>
+<br>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Instalowanie sterowników RTL-SDR</span></p>
+<p>a.) wejdź do swego katalogu domowego wykonując komendę:</p>
+<blockquote class="kontener">~$ <span style="font-weight: bold;">cd</span></blockquote>
+<p>b.) utwórz dedykowany katalog o nazwie "SDR":</p>
+<blockquote class="kontener">~$ <span style="font-weight: bold;">mkdir SDR</span></blockquote>
+<p>c.) wejdź do katalogu dedykowanego (SDR):</p>
+<blockquote class="kontener">~$ <span style="font-weight: bold;">cd SDR</span></blockquote>
+<p>d.) Pobierz ze strony producenta OSMOCOM i zainstaluj sterowniki dla układu RTL2832U:</p>
+<blockquote class="kontener">~/SDR/ <span style="font-weight: bold;">git clone git://git.osmocom.org/rtl-sdr.git</span><br>~/SDR/ <span style="font-weight: bold;">cd rtl-sdr/</span><br>~/SDR/rtl-sdr/ <span style="font-weight: bold;">mkdir build</span><br>~/SDR/rtl-sdr/ <span style="font-weight: bold;">cd build</span><br>~/SDR/rtl-sdr/build <span style="font-weight: bold;">cmake ../ -DINSTALL_UDEV_RULES = ON</span><br>~/SDR/rtl-sdr/build <span style="font-weight: bold;">make</span><br>~/SDR/rtl-sdr/build <span style="font-weight: bold;">sudo make install</span><br>~/SDR/rtl-sdr/build <span style="font-weight: bold;">sudo ldconfig</span><br>~/SDR/rtl-sdr/build <span style="font-weight: bold;">sudo cp ../rtl-sdr.rules /etc/udev/rules.d/</span></blockquote>
+<p>e.) By wyeliminować możliwość ładowania zbędnego modułu dvb kernela utwórz (jeśli jeszcze nie istnieje) "czarną listę" (blacklist) dla domyślnego sterownika (odbiornika DVB-T).</p>
+<p>e1.) wejdź do katalogu: <span style="font-weight: bold;">/etc/modprobe.d</span></p>
+<p>e2.) Utwórz (jeśli nie ma lub rozpocznij edycję jeśli istnieje) w trybie znakowym bezpośrednio, a w trybie graficznym w oknie terminala plik o nazwie "<span style="font-weight: bold;">blacklist-rtl.conf</span>" wywołując komendę:</p>
+<blockquote class="kontener">/etc/modprobe.d/ $ <span style="font-weight: bold;">sudo nano blacklist-rtl.conf</span> (zawierający następującą treść:)<br> blacklist dvb_usb_rtl28xxu<br> blacklist rtl2832<br> blacklist rtl2830</blockquote>
+<p>f.) Ponownie uruchom komputer. Choć istnieją inne metody aktywowania nowych ustawień, ta wydaje się najprostsza.</p>
+<p>g.) Po uruchomieniu się komputera, nie uruchamiając jeszcze aplikacji korzystających z tunera, włóż go do gniazda USB i sprawdź, czy urządzenie zostało prawidłowo rozpoznawane. W tym celu wydaj komendę:</p>
+<blockquote class="kontener">~ $ <span style="font-weight: bold;">rtl_test -t</span><br>Found 1 device(s):<br>0: Realtek, RTL2838UHIDIR, SN: 00000001<br>Using device 0: Generic RTL2832U OEM<br>Found Rafael Micro R820T tuner<br>Supported gain values (29): 0.0 0.9 1.4 2.7 3.7 7.7 8.7 12.5 14.4 15.7 16.6 19.7 20.7 22.9 25.4 28.0 29.7 32.8 33.8<br>36.4 37.2 38.6 40.2 42.1 43.4 43.9 44.5 48.0 49.6<br>[R82XX] PLL not locked!<br>Sampling at 2048000 S/s.<br>No E4000 tuner found, aborting.<br>~ $</blockquote>
+<p class="par00">Jeśli jednak najpierw uruchomiłeś aplikację sterującą tuner, a dopiero potem wywołałeś poniższą komendę to aktywność aplikacji najprawdopodobniej spowoduje następujący błąd:</p>
+<blockquote class="kontener">~ $ <span style="font-weight: bold;">rtl_test -t</span><br>Found 1 device(s): 0: Realtek, RTL2838UHIDIR, SN: 00000001<br>Using device 0: Generic RTL2832U OEM<br>usb_claim_interface error -6<br>Failed to open rtlsdr device #0.<br>~ $</blockquote>
+<p class="par00">Z kolei aktywna blacklista (czarna lista dla sterowników DVB-T) uniemożliwi wykorzystanie tunera jako urządzenia DVB-T, powodując błąd:</p>
+<blockquote class="kontener">~ $ <span style="font-weight: bold;">w_scan</span><br>w_scan w_scan version 20170107 (compiled for DVB API 5.10)<br>guessing country 'PL', use -c to override<br>using settings for POLAND<br>DVB aerial<br>DVB-T Europe scan type TERRESTRIAL, channellist 4<br>output format vdr-2.0<br>output charset 'UTF-8', use -C to override<br>Info: using DVB adapter auto detection.<br>main:4007: FATAL: ***** NO USEABLE TERRESTRIAL CARD FOUND.<br>***** Please check wether dvb driver is loaded and<br>verify that no dvb application (i.e. vdr) is running.<br>~ $</blockquote>
+<p class="par00">Ale to jest efekt zamierzony.</p>
+<p><span style="font-weight: bold;">Oznacza to, że odpowiednie sterowniki zostały zainstalowane, a system odpowiednio skonfigurowany</span>. Możemy teraz zainstalować i używać aplikacje SDR (np. Gqrx, Dump1090, <a href="http://www.tatek.pl/bakcyl/kr-radiowy/kr-warsztat/29-pingwinaria/161-cubicsdr01" target="_blank" rel="noopener noreferrer">CubicSDR</a> i in.), odwołujące się do sterowników RTL-SDR.</p>
+<p class="par00">&nbsp;</p>
+
+
+	
+
+
+</div>
+      </div>
+      </div>
+    <div class="box">
+      
+    </div>
+         
+  </div>
+</div>
+<div>
+ <img src="./tutorial_pl_files/c3a.png" alt="" style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 1">
+</div>
+
+
+<div id="sb-container"><div id="sb-overlay"></div><div id="sb-wrapper"><div id="sb-title"><div id="sb-title-inner"></div></div><div id="sb-wrapper-inner"><div id="sb-body"><div id="sb-body-inner"></div><div id="sb-loading"><div id="sb-loading-inner"><span>loading</span></div></div></div></div><div id="sb-info"><div id="sb-info-inner"><div id="sb-counter"></div><div id="sb-nav"><a id="sb-nav-close" title="Close" onclick="Shadowbox.close()"></a><a id="sb-nav-next" title="Next" onclick="Shadowbox.next()"></a><a id="sb-nav-play" title="Play" onclick="Shadowbox.play()"></a><a id="sb-nav-pause" title="Pause" onclick="Shadowbox.pause()"></a><a id="sb-nav-previous" title="Previous" onclick="Shadowbox.previous()"></a></div></div></div></div></div></body></html>
